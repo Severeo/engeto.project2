@@ -1,0 +1,84 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #15304c;
+    height: 70px;
+    padding: 0 20px;
+}
+header nav {
+    margin-right: 30px;
+}
+header nav li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 20px;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+.menu-icon {
+    display: none;
+    margin-right: 30px;
+}
+.logo {
+    flex-grow: 1;
+}
+.logo img {
+    width: 200px;
+    margin-left: 20px;
+}
+
+/* Welcome */
+.welcome {
+    background: url("img/background.webp");
+    min-height: calc(100vh - 70px);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    header {
+        position: relative;
+    }
+    header nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        background-color: #15304c;
+        width: 100%;
+    }
+    header nav.active {
+        display: block;
+    }
+    header nav li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+    .menu-icon {
+        display: block;
+        color: white;
+        font-size: 23px;
+    }
+}
